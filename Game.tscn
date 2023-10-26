@@ -1,12 +1,219 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Corner_H_L.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Wall_Left.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Corner_H_R.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Wall_Higher.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Wall_Right.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Floor.png" type="Texture" id=8]
+[ext_resource path="res://Corner_B_R.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Corner_B_L.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Wall_Bottom.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 112, 64 )
+z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
 zoom = Vector2( 0.25, 0.25 )
+
+[node name="Floor\'s" type="Node2D" parent="."]
+
+[node name="Floor" type="Sprite" parent="Floor\'s"]
+position = Vector2( 96, 48 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor2" type="Sprite" parent="Floor\'s"]
+position = Vector2( 112, 48 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor3" type="Sprite" parent="Floor\'s"]
+position = Vector2( 128, 48 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor4" type="Sprite" parent="Floor\'s"]
+position = Vector2( 144, 48 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor5" type="Sprite" parent="Floor\'s"]
+position = Vector2( 160, 48 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor6" type="Sprite" parent="Floor\'s"]
+position = Vector2( 160, 64 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor7" type="Sprite" parent="Floor\'s"]
+position = Vector2( 128, 64 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor8" type="Sprite" parent="Floor\'s"]
+position = Vector2( 96, 64 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor9" type="Sprite" parent="Floor\'s"]
+position = Vector2( 112, 64 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor10" type="Sprite" parent="Floor\'s"]
+position = Vector2( 144, 64 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor11" type="Sprite" parent="Floor\'s"]
+position = Vector2( 96, 80 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor12" type="Sprite" parent="Floor\'s"]
+position = Vector2( 160, 80 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor13" type="Sprite" parent="Floor\'s"]
+position = Vector2( 128, 80 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor14" type="Sprite" parent="Floor\'s"]
+position = Vector2( 144, 80 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor15" type="Sprite" parent="Floor\'s"]
+position = Vector2( 112, 80 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor16" type="Sprite" parent="Floor\'s"]
+position = Vector2( 160, 96 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor17" type="Sprite" parent="Floor\'s"]
+position = Vector2( 144, 96 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor18" type="Sprite" parent="Floor\'s"]
+position = Vector2( 128, 96 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor19" type="Sprite" parent="Floor\'s"]
+position = Vector2( 112, 96 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Floor20" type="Sprite" parent="Floor\'s"]
+position = Vector2( 96, 96 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 96, 32 )
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 112, 32 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 128, 32 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 144, 32 )
+
+[node name="Wall5" parent="Walls" instance=ExtResource( 2 )]
+position = Vector2( 160, 32 )
+
+[node name="Corner_H_L" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 80, 16 )
+
+[node name="Corner_H_R" parent="Walls" instance=ExtResource( 5 )]
+position = Vector2( 176, 16 )
+rotation = -0.00579354
+
+[node name="Wall_Higher" parent="Walls" instance=ExtResource( 6 )]
+position = Vector2( 160, 16 )
+
+[node name="Wall_Higher2" parent="Walls" instance=ExtResource( 6 )]
+position = Vector2( 144, 16 )
+
+[node name="Wall_Higher3" parent="Walls" instance=ExtResource( 6 )]
+position = Vector2( 128, 16 )
+
+[node name="Wall_Higher4" parent="Walls" instance=ExtResource( 6 )]
+position = Vector2( 112, 16 )
+
+[node name="Wall_Higher5" parent="Walls" instance=ExtResource( 6 )]
+position = Vector2( 96, 16 )
+
+[node name="Wall_Right" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 176, 96 )
+
+[node name="Wall_Right2" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 176, 80 )
+
+[node name="Wall_Right3" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 176, 64 )
+
+[node name="Wall_Right4" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 176, 48 )
+
+[node name="Wall_Right5" parent="Walls" instance=ExtResource( 4 )]
+position = Vector2( 176, 32 )
+
+[node name="Wall_Left" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 32 )
+
+[node name="Wall_Left2" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 48 )
+
+[node name="Wall_Left3" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 64 )
+
+[node name="Wall_Left4" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 80 )
+
+[node name="Wall_Left5" parent="Walls" instance=ExtResource( 7 )]
+position = Vector2( 80, 96 )
+
+[node name="Wall_Bottom" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 96, 112 )
+
+[node name="Wall_Bottom2" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 112, 112 )
+
+[node name="Wall_Bottom3" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 144, 112 )
+
+[node name="Wall_Bottom6" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 160, 112 )
+
+[node name="Wall_Bottom4" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 128, 112 )
+
+[node name="Wall_Bottom5" parent="Walls" instance=ExtResource( 11 )]
+position = Vector2( 128, 112 )
+
+[node name="Corner_B_L" parent="Walls" instance=ExtResource( 10 )]
+position = Vector2( 80, 112 )
+
+[node name="Corner_B_R" parent="Walls" instance=ExtResource( 9 )]
+position = Vector2( 176, 112 )
