@@ -8,15 +8,8 @@ var inputs = {
 	'ui_left': Vector2.LEFT,
 	'ui_right': Vector2.RIGHT
 }
-
-func _unhandled_input(event):
-	for dir in inputs.keys():
-		if event.is_action_pressed(dir):
-			if $Tween.is_active() == false:
-				move(dir)
 			
 func move(dir):
-	var game = get_parent()
 	var vector_pos = inputs[dir] * grid_size
 	ray.cast_to = vector_pos
 	ray.force_raycast_update()
@@ -28,15 +21,5 @@ func move(dir):
 	)
 	if !ray.is_colliding():
 		$Tween.start()
-		game.moves += 1
-	else:
-		var collider = ray.get_collider()
-		if collider.is_in_group('box'):
-			if collider.move(dir):
-				$Tween.start()
-				game.moves += 1
-	
-
-
-func _on_Tween_tween_all_completed():
-	get_parent().check_end()
+		return true
+	return false
