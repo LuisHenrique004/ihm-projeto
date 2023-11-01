@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://PressStart2P.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/controlsScreen.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="controlsScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="BG" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.705882 )
+
+[node name="info" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -576.0
+margin_top = -79.0
+margin_right = 576.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
+text = "---------- CONTROLES ----------
+Seta para cima: mover-se para cima
+Seta para direita: mover-se para direita
+Seta para baixo: mover-se para baixo
+Seta para esquerda: mover-se para esuerda
+
+O objetivo do jogo consiste em levar a caixa até o ponto marcado no mapa"
+align = 1
+
+[node name="returnBnt" type="Button" parent="."]
+margin_left = 1104.0
+margin_top = 16.0
+margin_right = 1254.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.968627, 0.823529, 0.0352941, 1 )
+custom_colors/font_color_pressed = Color( 0.988235, 0.415686, 0.0352941, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "Voltar"
+flat = true
+
+[connection signal="pressed" from="returnBnt" to="." method="_on_returnBnt_pressed"]
