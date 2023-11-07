@@ -4,7 +4,7 @@ var game_end = false
 var moves = 0
 
 func _process(_delta):
-	$MovesLabel.text = 'Moves: ' + str(moves)
+	$MovesLabel.text = 'Passos: ' + str(moves)
 
 func check_end():
 	if game_end == false:
@@ -20,3 +20,7 @@ func check_end():
 
 func _on_AcceptDialog_confirmed():
 	get_tree().reload_current_scene()
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Scenes/Menu/StartScreen.tscn")
