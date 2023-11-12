@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Inventory/InventorySloteDisplay.tscn" type="PackedScene" id=1]
+
+[node name="InventoryDisplay" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 10
+
+[node name="InventorySloteDisplay" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 125.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay2" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay3" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 258.0
+margin_right = 383.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay4" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 387.0
+margin_right = 512.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay5" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 516.0
+margin_right = 640.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay6" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 644.0
+margin_right = 768.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay7" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 772.0
+margin_right = 896.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay8" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 900.0
+margin_right = 1024.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay9" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1028.0
+margin_right = 1152.0
+margin_bottom = 720.0
+
+[node name="InventorySloteDisplay10" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1156.0
+margin_right = 1280.0
+margin_bottom = 720.0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://items/EmptyInventorySlot.png" type="Texture" id=1]
+
+[node name="InventorySloteDisplay" type="CenterContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ItemTextureRect" type="TextureRect" parent="."]
+margin_left = 631.0
+margin_top = 351.0
+margin_right = 649.0
+margin_bottom = 369.0
+rect_min_size = Vector2( 18, 18 )
+texture = ExtResource( 1 )
+stretch_mode = 4

@@ -8,10 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://items/Inventory.gd"
+}, {
+"base": "Resource",
+"class": "Item",
+"language": "GDScript",
+"path": "res://items/Item.gd"
+} ]
+_global_script_class_icons={
+"Inventory": "",
+"Item": ""
+}
+
 [application]
 
 config/name="ihm-game"
-run/main_scene="res://Scenes/Menu/StartScreen.tscn"
+run/main_scene="res://Scenes/Game/Game.tscn"
 config/icon="res://icon.png"
 
 [display]
