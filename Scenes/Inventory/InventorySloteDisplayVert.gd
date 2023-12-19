@@ -1,8 +1,8 @@
 extends CenterContainer
 
-var inventory = preload("res://Inventory.tres")
+var inventory = preload("res://InventoryV.tres")
 
-onready var itemTextureRect = $ItemTextureRect
+onready var itemTextureRect = $TextureRect
 
 func display_item(item):
 	if item is Item:

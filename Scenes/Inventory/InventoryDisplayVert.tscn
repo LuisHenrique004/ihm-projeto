@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Inventory/InventorySloteDisplayVert.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Inventory/InventoryDisplayVert.gd" type="Script" id=2]
+
+[node name="InventoryDisplayVert" type="GridContainer"]
+margin_left = 20.0
+margin_top = 48.0
+margin_right = 20.0
+margin_bottom = 48.0
+script = ExtResource( 2 )
+
+[node name="InventorySloteDisplayVert" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 18.0
+margin_bottom = 18.0
+
+[node name="InventorySloteDisplayVert2" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 22.0
+margin_right = 18.0
+margin_bottom = 40.0
+
+[node name="InventorySloteDisplayVert3" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 18.0
+margin_bottom = 62.0
+
+[node name="InventorySloteDisplayVert4" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 66.0
+margin_right = 18.0
+margin_bottom = 84.0

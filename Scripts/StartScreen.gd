@@ -4,7 +4,6 @@ func _ready():
 	pass
 
 
-
 func _on_jogarBnt_pressed():
 	get_tree().change_scene("res://Scenes/Game/Game.tscn")
 
