@@ -911,18 +911,18 @@ margin_right = 233.0
 margin_bottom = 22.0
 inventory = ExtResource( 19 )
 
-[node name="Inventory" type="ColorRect" parent="."]
+[node name="InventoryVertical" type="ColorRect" parent="."]
 margin_left = 278.0
 margin_top = 32.0
 margin_right = 318.0
 margin_bottom = 128.0
 color = Color( 0, 0, 0, 0 )
 
-[node name="CenterContainer" type="CenterContainer" parent="Inventory"]
+[node name="CenterContainer" type="CenterContainer" parent="InventoryVertical"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="InventoryDisplayVert" parent="Inventory/CenterContainer" instance=ExtResource( 20 )]
+[node name="InventoryDisplayVert" parent="InventoryVertical/CenterContainer" instance=ExtResource( 20 )]
 margin_left = 11.0
 margin_top = 6.0
 margin_right = 29.0
