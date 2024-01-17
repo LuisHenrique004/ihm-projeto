@@ -12,7 +12,7 @@ func display_item(item):
 
 func get_drag_data(_position):
 	var item_index = get_index()
-	var item = inventory.remove_item(item_index)
+	var item = inventory.items[item_index]
 	if item is Item:
 		var data = {}
 		data.item = item
@@ -20,7 +20,7 @@ func get_drag_data(_position):
 		var dragPreview = TextureRect.new()
 		dragPreview.texture = item.texture
 		dragPreview.expand = true
-		dragPreview.rect_size = Vector2(40, 40)
+		dragPreview.rect_size = Vector2(16, 16)
 		dragPreview.rect_position = get_global_mouse_position() - dragPreview.texture.get_size() / 2
 		set_drag_preview(dragPreview)
 		return data

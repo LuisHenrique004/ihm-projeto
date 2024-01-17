@@ -26,3 +26,5 @@ func remove_item(item_index):
 	items[item_index] = null
 	emit_signal("items_changed", [item_index])
 	return previousItem
+	
+
