@@ -8,6 +8,9 @@ export(Array, Resource) var items = [
 	
 ]
 
+func get_item(item_index):
+	return items[item_index]
+
 func set_item(item_index, item):
 	var previousItem = items[item_index]
 	items[item_index] = item

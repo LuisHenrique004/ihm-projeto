@@ -16,6 +16,7 @@ func get_drag_data(_position):
 	if item is Item:
 		var data = {}
 		data.item = item
+		data.swap = true
 		data.item_index = item_index
 		var dragPreview = TextureRect.new()
 		dragPreview.texture = item.texture
@@ -31,5 +32,8 @@ func can_drop_data(_position, data):
 func drop_data(_position, data):
 	var my_item_index = get_index()
 	var my_item = inventory.items[my_item_index]
-	inventory.swap_items(my_item_index, data.item_index)
-	inventory.set_item(my_item_index, data.item)
+	if data.swap:
+		inventory.set_item(my_item_index, data.item)
+		inventory.set_item(data.item_index, my_item)
+	else:
+		inventory.set_item(my_item_index, data.item)
