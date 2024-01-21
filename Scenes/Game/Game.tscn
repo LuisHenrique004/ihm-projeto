@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Scenes/Game/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Walls/Wall.tscn" type="PackedScene" id=2]
@@ -21,9 +21,10 @@
 [ext_resource path="res://Inventory.tres" type="Resource" id=19]
 [ext_resource path="res://Scenes/Inventory/InventoryDisplayVert.tscn" type="PackedScene" id=20]
 [ext_resource path="res://InventoryV.tres" type="Resource" id=21]
-[ext_resource path="res://items/panel-border-013.png" type="Texture" id=22]
+[ext_resource path="res://items/UI_Flat_Frame_02_Horizontal.png" type="Texture" id=22]
 [ext_resource path="res://items/crosshair026.png" type="Texture" id=23]
 [ext_resource path="res://items/UI_Flat_Frame_02_Vertical.png" type="Texture" id=24]
+[ext_resource path="res://items/generic_button_square_outline.png" type="Texture" id=25]
 
 [sub_resource type="DynamicFont" id=2]
 size = 9
@@ -896,7 +897,7 @@ margin_left = 35.0
 margin_top = 151.0
 margin_right = 286.0
 margin_bottom = 178.0
-color = Color( 1, 1, 1, 0.784314 )
+color = Color( 0.219608, 0.00784314, 0.00784314, 0 )
 script = ExtResource( 18 )
 
 [node name="CenterContainer" type="CenterContainer" parent="InventoryContainer"]
@@ -975,54 +976,60 @@ z_index = -1
 texture = ExtResource( 23 )
 offset = Vector2( -27.4286, -98.9091 )
 
-[node name="Panel-border-013" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline" type="Sprite" parent="boxInventory"]
 position = Vector2( 60.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-014" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline2" type="Sprite" parent="boxInventory"]
 position = Vector2( 82.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-015" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline3" type="Sprite" parent="boxInventory"]
 position = Vector2( 104.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-016" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline4" type="Sprite" parent="boxInventory"]
 position = Vector2( 126.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-017" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline5" type="Sprite" parent="boxInventory"]
 position = Vector2( 148.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-018" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline6" type="Sprite" parent="boxInventory"]
 position = Vector2( 170.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-019" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline7" type="Sprite" parent="boxInventory"]
 position = Vector2( 192.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-020" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline8" type="Sprite" parent="boxInventory"]
 position = Vector2( 214.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-021" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline9" type="Sprite" parent="boxInventory"]
 position = Vector2( 236.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
-texture = ExtResource( 22 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
 
-[node name="Panel-border-022" type="Sprite" parent="boxInventory"]
+[node name="GenericButtonSquareOutline10" type="Sprite" parent="boxInventory"]
 position = Vector2( 258.5, 164 )
-scale = Vector2( 0.3125, 0.333333 )
+scale = Vector2( 0.328125, 0.34375 )
+texture = ExtResource( 25 )
+
+[node name="UiFlatFrame02Horizontal" type="Sprite" parent="."]
+position = Vector2( 160, 163 )
+scale = Vector2( 3.375, 1 )
+z_index = -1
 texture = ExtResource( 22 )
 
 [connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
