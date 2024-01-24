@@ -37,3 +37,5 @@ func drop_data(_position, data):
 		inventory.set_item(data.item_index, my_item)
 	else:
 		inventory.set_item(my_item_index, data.item)
+		
+	print("Seta solta:", data.item.name)

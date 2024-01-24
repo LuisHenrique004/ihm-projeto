@@ -8,8 +8,8 @@ export(Array, Resource) var items = [
 	
 ]
 
-func get_item(item_index):
-	return items[item_index]
+func get_items():
+	return items
 
 func set_item(item_index, item):
 	var previousItem = items[item_index]
@@ -29,3 +29,4 @@ func remove_item(item_index):
 	items[item_index] = null
 	emit_signal("items_changed", [item_index])
 	return previousItem
+

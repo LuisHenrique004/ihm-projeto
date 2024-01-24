@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scenes/Game/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Walls/Wall.tscn" type="PackedScene" id=2]
@@ -29,6 +29,22 @@
 [sub_resource type="DynamicFont" id=2]
 size = 9
 font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 8
+font_data = ExtResource( 16 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.231373, 0.698039, 0.254902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.231373, 0.698039, 0.254902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.231373, 0.698039, 0.254902, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.231373, 0.698039, 0.254902, 1 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 10
@@ -873,6 +889,22 @@ rect_rotation = 0.402528
 custom_fonts/font = SubResource( 2 )
 text = "Passos: 0"
 
+[node name="JogarBnt" type="Button" parent="."]
+margin_left = 270.0
+margin_top = 154.0
+margin_right = 312.0
+margin_bottom = 174.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 0.823529, 0.0352941, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.415686, 0.0352941, 1 )
+custom_fonts/font = SubResource( 15 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
+text = "Jogar"
+
 [node name="Button" type="Button" parent="."]
 margin_left = 256.0
 margin_right = 316.0
@@ -1026,11 +1058,12 @@ position = Vector2( 258.5, 164 )
 scale = Vector2( 0.328125, 0.34375 )
 texture = ExtResource( 25 )
 
-[node name="UiFlatFrame02Horizontal" type="Sprite" parent="."]
+[node name="UiFlatFrame02Horizontal" type="Sprite" parent="boxInventory"]
 position = Vector2( 160, 163 )
 scale = Vector2( 3.375, 1 )
 z_index = -1
 texture = ExtResource( 22 )
 
 [connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]
+[connection signal="pressed" from="JogarBnt" to="InventoryContainer/CenterContainer/InventoryDisplay" method="_on_JogarBnt_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

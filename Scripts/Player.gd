@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var index = 0
+
 onready var ray = $RayCast2D
 var grid_size = 16
 var inputs = {
@@ -17,26 +19,45 @@ func _unhandled_input(event):
 			
 func move(dir):
 	var game = get_parent()
-	var vector_pos = inputs[dir] * grid_size
-	ray.cast_to = vector_pos
-	ray.force_raycast_update()
-	$Tween.interpolate_property(
-		self, "position", 
-		position, position + vector_pos, 0.15, 
-		Tween.TRANS_SINE,
-		Tween.EASE_IN_OUT
-	)
-	if !ray.is_colliding():
-		$Tween.start()
-		game.moves += 1
-	else:
-		var collider = ray.get_collider()
-		if collider.is_in_group('box'):
-			if collider.move(dir):
+
+	if dir in inputs:
+		print("Direção mapeada:", dir)
+		var vector_pos = inputs[dir] * grid_size
+		ray.cast_to = vector_pos
+		ray.force_raycast_update()
+		$Tween.interpolate_property(
+			self, "position", 
+			position, position + vector_pos, 0.15, 
+			Tween.TRANS_SINE,
+			Tween.EASE_IN_OUT
+		)
+
+		if !ray.is_colliding():
+			$Tween.start()
+			game.moves += 1
+		else:
+			var collider = ray.get_collider()
+			if collider.is_in_group('box') and collider.move(dir):
 				$Tween.start()
 				game.moves += 1
-	
-
+	else:
+		print("Erro: Direção não mapeada -", dir)
 
 func _on_Tween_tween_all_completed():
 	get_parent().check_end()
+	
+func get_direction_from_arrow(arrow):
+	match arrow.name:
+		"seta_cima":
+			return Vector2.UP
+		"seta_baixo":
+			return Vector2.DOWN
+		"seta_esq":
+			return Vector2.LEFT
+		"seta_dir":
+			return Vector2.RIGHT
+		_:
+			print("Seta não reconhecida:", arrow.name)
+			return Vector2.ZERO
+
+
