@@ -13,10 +13,12 @@ func check_end():
 			if i.occupied:
 				spots -= 1
 	
+	
 		if spots == 0:
 			$AcceptDialog.popup()
 			game_end = true
-
+	else:
+		print("algo")
 
 func _on_AcceptDialog_confirmed():
 	get_tree().reload_current_scene()

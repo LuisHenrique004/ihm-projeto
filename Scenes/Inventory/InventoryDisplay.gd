@@ -3,6 +3,9 @@ extends GridContainer
 export (Resource) var inventory
 export (Resource) var inputs
 
+var timer = Timer.new()
+var steps = 0
+
 func _ready():
 	inventory.connect("items_changed", self, "_on_items_changed")
 	update_inventory_display()
@@ -25,10 +28,26 @@ func _on_JogarBnt_pressed():
 	if player_ref != null:
 		var items = inventory.items
 		print("Inventário:", items)
-		
-		for item in items:
-			if item != null and item is Item and item.name in ["ui_up", "ui_down", "ui_left", "ui_right"]:
-				print("Item no inventário:", item.name)
-				player_ref.move(item.name)
+		_start_time()
 	else:
 		print("Erro ao obter referência do jogador.")
+
+func _timer_callback():
+	var items = inventory.items
+	if (steps < items.size() && items[steps] != null):
+		var player_ref = get_tree().get_root().get_node("Node2D").get_node("Player")
+		player_ref.move(items[steps].name)
+		timer.start()
+		steps += 1
+
+func _start_time():
+	steps = 0
+	var player_ref = get_tree().get_root().get_node("Node2D").get_node("Player")
+	timer.one_shot = true
+	timer.wait_time = 0.5
+	timer.connect("timeout", self, "_timer_callback")
+	player_ref.add_child(timer)
+	timer.start()
+
+	
+

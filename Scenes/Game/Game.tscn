@@ -849,17 +849,10 @@ position = Vector2( 208, 128 )
 [node name="Box" parent="Boxes" instance=ExtResource( 12 )]
 position = Vector2( 144, 96 )
 
-[node name="Box2" parent="Boxes" instance=ExtResource( 12 )]
-position = Vector2( 160, 80 )
-
 [node name="Spots" type="Node2D" parent="."]
 
 [node name="Spot" parent="Spots" instance=ExtResource( 13 )]
 position = Vector2( 192, 64 )
-z_index = -1
-
-[node name="Spot2" parent="Spots" instance=ExtResource( 13 )]
-position = Vector2( 112, 64 )
 z_index = -1
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
