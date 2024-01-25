@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-var index = 0
-
 onready var ray = $RayCast2D
 var grid_size = 16
 var inputs = {
@@ -23,6 +21,7 @@ func move(dir):
 	if dir in inputs:
 		print("Direção mapeada:", dir)
 		var vector_pos = inputs[dir] * grid_size
+		print("Vector Pos:", vector_pos)
 		ray.cast_to = vector_pos
 		ray.force_raycast_update()
 		$Tween.interpolate_property(
@@ -45,19 +44,6 @@ func move(dir):
 
 func _on_Tween_tween_all_completed():
 	get_parent().check_end()
-	
-func get_direction_from_arrow(arrow):
-	match arrow.name:
-		"seta_cima":
-			return Vector2.UP
-		"seta_baixo":
-			return Vector2.DOWN
-		"seta_esq":
-			return Vector2.LEFT
-		"seta_dir":
-			return Vector2.RIGHT
-		_:
-			print("Seta não reconhecida:", arrow.name)
-			return Vector2.ZERO
+
 
 
