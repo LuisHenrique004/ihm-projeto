@@ -30,7 +30,7 @@ script = ExtResource( 2 )
 [node name="BG" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.705882 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="info" type="Label" parent="."]
 anchor_left = 0.5
@@ -52,10 +52,14 @@ O objetivo do jogo consiste em levar a caixa até o ponto marcado no mapa"
 align = 1
 
 [node name="returnBnt" type="Button" parent="."]
-margin_left = 1104.0
-margin_top = 16.0
-margin_right = 1254.0
-margin_bottom = 41.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -187.5
+margin_top = -75.0
+margin_right = 187.5
+margin_bottom = -50.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0.968627, 0.823529, 0.0352941, 1 )
 custom_colors/font_color_pressed = Color( 0.988235, 0.415686, 0.0352941, 1 )
@@ -64,7 +68,7 @@ custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-text = "Voltar"
+text = "Fechar Tutorial"
 flat = true
 
 [connection signal="pressed" from="returnBnt" to="." method="_on_returnBnt_pressed"]

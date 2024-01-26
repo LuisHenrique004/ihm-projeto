@@ -17,8 +17,6 @@ func check_end():
 		if spots == 0:
 			$AcceptDialog.popup()
 			game_end = true
-	else:
-		print("algo")
 
 func _on_AcceptDialog_confirmed():
 	get_tree().reload_current_scene()
@@ -26,3 +24,4 @@ func _on_AcceptDialog_confirmed():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Menu/StartScreen.tscn")
+	

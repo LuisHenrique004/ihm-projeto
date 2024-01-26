@@ -15,7 +15,7 @@ func on_button_pressed(button: Button) -> void:
 			var _fases: bool = get_tree().change_scene("res://Scenes/Game/Player.tscn")
 		
 		"Controles":
-			var _controles: bool = get_tree().change_scene("res://Scenes/Walls/Wall.tscn")
+			var _controles: bool = get_tree().change_scene("res://Scenes/Menu/controlsScreen.tscn")
 			
 		"Sair":
 			get_tree().quit()
