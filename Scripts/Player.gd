@@ -46,4 +46,3 @@ func _on_Tween_tween_all_completed():
 	get_parent().check_end()
 
 
-

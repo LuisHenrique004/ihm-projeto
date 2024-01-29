@@ -2,9 +2,7 @@
 
 [ext_resource path="res://PressStart2P.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/controlsScreen.gd" type="Script" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+[ext_resource path="res://tutorial_game.webm" type="VideoStream" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
@@ -30,26 +28,19 @@ script = ExtResource( 2 )
 [node name="BG" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0.705882 )
 
-[node name="info" type="Label" parent="."]
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -576.0
-margin_top = -79.0
-margin_right = 576.0
-margin_bottom = 79.0
-custom_fonts/font = SubResource( 1 )
-text = "---------- CONTROLES ----------
-Seta para cima: mover-se para cima
-Seta para direita: mover-se para direita
-Seta para baixo: mover-se para baixo
-Seta para esquerda: mover-se para esuerda
-
-O objetivo do jogo consiste em levar a caixa até o ponto marcado no mapa"
-align = 1
+margin_left = -432.0
+margin_top = -240.0
+margin_right = 432.0
+margin_bottom = 240.0
+stream = ExtResource( 3 )
+autoplay = true
 
 [node name="returnBnt" type="Button" parent="."]
 anchor_left = 0.5

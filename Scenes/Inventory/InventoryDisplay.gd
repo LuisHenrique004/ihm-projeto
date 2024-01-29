@@ -39,6 +39,13 @@ func _timer_callback():
 		player_ref.move(items[steps].name)
 		timer.start()
 		steps += 1
+	else:
+		var spot = get_tree().get_root().get_node("Node2D").get_node("Spots").get_node("Spot")
+		if spot.occupied:
+			print("blz")
+		else:
+			get_tree().get_root().get_node("Node2D").get_node("AcceptDialog_erro").popup()
+			print("falhou")
 
 func _start_time():
 	steps = 0
