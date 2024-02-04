@@ -2,7 +2,7 @@
 
 [ext_resource path="res://PressStart2P.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/controlsScreen.gd" type="Script" id=2]
-[ext_resource path="res://tutorial_game.webm" type="VideoStream" id=3]
+[ext_resource path="res://video_tutorial.webm" type="VideoStream" id=3]
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
