@@ -5,7 +5,7 @@ var moves = 0
 var FILE_NAME = "user://game-data.json"
 
 func _process(_delta):
-	$MovesLabel.text = 'Passos: ' + str(moves)
+	$MovesLabel.text = 'Passos: ' + str(moves) + '/10'
 
 func check_end():
 	if game_end == false:

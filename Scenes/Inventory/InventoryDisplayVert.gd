@@ -18,3 +18,5 @@ func update_inventory_slot_display(item_index):
 func _on_items_changed(indexes):
 	for item_index in indexes:
 		update_inventory_slot_display(item_index)
+
+

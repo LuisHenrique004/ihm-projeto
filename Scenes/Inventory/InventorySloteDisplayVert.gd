@@ -19,10 +19,9 @@ func get_drag_data(_position):
 		data.swap = false
 		data.item_index = item_index
 		var dragPreview = TextureRect.new()
-		dragPreview.texture = item.texture
 		dragPreview.expand = true
+		dragPreview.texture = item.texture
 		dragPreview.rect_size = Vector2(16, 16)
-		dragPreview.rect_position = get_global_mouse_position() - dragPreview.texture.get_size() / 2
 		set_drag_preview(dragPreview)
 		return data
 		

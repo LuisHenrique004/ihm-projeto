@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://PressStart2P.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/controlsScreen.gd" type="Script" id=2]
 [ext_resource path="res://video_tutorial.webm" type="VideoStream" id=3]
+[ext_resource path="res://Assets/tutorial.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=2]
 size = 25
@@ -31,6 +32,7 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.705882 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -61,5 +63,17 @@ custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 text = "Fechar Tutorial"
 flat = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -528.0
+margin_top = -264.0
+margin_right = 1204.0
+margin_bottom = 421.0
+rect_scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="returnBnt" to="." method="_on_returnBnt_pressed"]
